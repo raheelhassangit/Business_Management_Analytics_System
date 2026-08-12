@@ -3,6 +3,8 @@ from app.physical_product import PhysicalProduct
 from app.digital_product import DigitalProduct
 from app.product_manager import ProductManager
 from app.customer import Customer
+from app.sale import Sale
+from app.sale_manager import SaleManager
 
 
 def main():
@@ -94,10 +96,21 @@ def main():
                         product.display_product_info()            
         
         elif choice == "3":
+            sale_manager = SaleManager(
+                    customer_manager,
+                    product_manager
+                )
             print("Enter the option you want to perform:")
             print("1. Record the sale")
             print("2. View sale")
             print("3. View all sales")
+            if choice == "1":
+                sale_id = int(input("Enter the sale ID:"))
+                sale_customer_id = int(input("Enter the customer ID:"))
+                sale_product_id = int(input("Enter the product ID:"))
+                sale_quantity = int(input("Enter the quantity:"))
+                sale_manager.record_sale(sale_id, sale_customer_id, sale_product_id, sale_quantity)
+                
             
         elif choice == "4":
             print("Exiting the system.")
