@@ -10,6 +10,10 @@ from app.sale_manager import SaleManager
 def main():
     product_manager = ProductManager()
     customer_manager = CustomerManager()
+    sale_manager = SaleManager(
+    customer_manager,
+    product_manager
+    )
     
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
@@ -96,24 +100,32 @@ def main():
                         product.display_product_info()            
         
         elif choice == "3":
-            sale_manager = SaleManager(
-                    customer_manager,
-                    product_manager
-                )
+            
             print("Enter the option you want to perform:")
             print("1. Record the sale")
             print("2. View sale")
             print("3. View all sales")
-            if choice == "1":
+            sale_choice = input("Enter your choice: ")
+            if sale_choice == "1":
                 sale_id = int(input("Enter the sale ID:"))
                 sale_customer_id = int(input("Enter the customer ID:"))
                 sale_product_id = int(input("Enter the product ID:"))
                 sale_quantity = int(input("Enter the quantity:"))
                 sale_manager.record_sale(sale_id, sale_customer_id, sale_product_id, sale_quantity)
-            elif choice == "2":
+            elif sale_choice == "2":
                 sale_id = int(input("Enter the sale ID:"))
-                sale_manager.get_sale(sale_id)
-            elif choice == "3":
+                sale = sale_manager.get_sale(sale_id)
+                if sale:
+                    print("\n--- Sale Information ---")
+                    print(f"Sale ID: {sale.sale_id}")
+                    print(f"Customer: {sale.customer.name}")
+                    print(f"Product: {sale.product.name}")
+                    print(f"Quantity: {sale.quantity}")
+                    print(f"Unit Price: ${sale.price:.2f}")
+                    print(f"Total Price: ${sale.total_price:.2f}")
+                else:
+                    print("Sale not found.")
+            elif sale_choice == "3":
                 sale_manager.get_all_sales()    
             
         elif choice == "4":
