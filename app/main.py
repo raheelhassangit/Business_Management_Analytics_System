@@ -126,8 +126,18 @@ def main():
                 else:
                     print("Sale not found.")
             elif sale_choice == "3":
-                sale_manager.get_all_sales()    
-            
+                sales = sale_manager.get_all_sales()    
+                if not sales:
+                    print("No sales found.")
+                else:
+                    for sale in sales:
+                        print("\n--- Sale Information ---")
+                        print(f"Sale ID: {sale.sale_id}")
+                        print(f"Customer: {sale.customer.name}")
+                        print(f"Product: {sale.product.name}")
+                        print(f"Quantity: {sale.quantity}")
+                        print(f"Unit Price: ${sale.price:.2f}")
+                        print(f"Total Price: ${sale.total_price:.2f}")            
         elif choice == "4":
             print("Exiting the system.")
             break
