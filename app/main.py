@@ -113,6 +113,8 @@ def main():
             elif choice == "2":
                 sale_id = int(input("Enter the sale ID:"))
                 sale_manager.get_sale(sale_id)
+            elif choice == "3":
+                sale_manager.get_all_sales()    
             
         elif choice == "4":
             print("Exiting the system.")
