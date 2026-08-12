@@ -14,7 +14,8 @@ def main():
         print("\nPlease select an option:")
         print("1. Manage Customers")
         print("2. Manage Products")
-        print("3. Exit")
+        print("3. Manage Sales")
+        print("4. Exit")
 
         choice = input("Enter your choice: ")
 
