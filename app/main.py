@@ -110,7 +110,9 @@ def main():
                 sale_product_id = int(input("Enter the product ID:"))
                 sale_quantity = int(input("Enter the quantity:"))
                 sale_manager.record_sale(sale_id, sale_customer_id, sale_product_id, sale_quantity)
-                
+            elif choice == "2":
+                sale_id = int(input("Enter the sale ID:"))
+                sale_manager.get_sale(sale_id)
             
         elif choice == "4":
             print("Exiting the system.")
