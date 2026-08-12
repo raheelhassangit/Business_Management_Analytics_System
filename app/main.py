@@ -52,7 +52,6 @@ def main():
             print("2. Add Digital Product")
             print("3. View Product Information")
             print("4. View All Products Information")    
-            
             product_choice = input("Enter your choice: ")
             if product_choice == "1":
                 product_id = int(input("Enter the product ID:"))
@@ -93,8 +92,14 @@ def main():
                 for product in product_manager.get_all_products():
                     if isinstance(product, DigitalProduct):
                         product.display_product_info()            
-            
+        
         elif choice == "3":
+            print("Enter the option you want to perform:")
+            print("1. Record the sale")
+            print("2. View sale")
+            print("3. View all sales")
+            
+        elif choice == "4":
             print("Exiting the system.")
             break
         else:
