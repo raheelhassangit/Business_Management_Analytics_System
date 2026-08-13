@@ -156,10 +156,10 @@ def main():
             elif search_choice == "2":
                 product_id = int(input("Enter Product ID: "))
                 product = product_manager.get_product(product_id)
-            elif product:
-                product.display_product_info()
-            else:
-                print("Product not found.")
+                if product:
+                    product.display_product_info()
+                else:
+                    print("Product not found.")
             if search_choice == "3":
                 sale_id = int(input("Enter Sale ID: "))
 
