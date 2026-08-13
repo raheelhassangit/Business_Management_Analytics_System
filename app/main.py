@@ -21,7 +21,8 @@ def main():
         print("1. Manage Customers")
         print("2. Manage Products")
         print("3. Manage Sales")
-        print("4. Exit")
+        print("4. Search Records")
+        print("5. Exit")
 
         choice = input("Enter your choice: ")
 
