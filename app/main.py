@@ -3,7 +3,6 @@ from app.physical_product import PhysicalProduct
 from app.digital_product import DigitalProduct
 from app.product_manager import ProductManager
 from app.customer import Customer
-from app.sale import Sale
 from app.sale_manager import SaleManager
 
 
@@ -154,10 +153,10 @@ def main():
                     customer_manager.view_customer_info(customer_id)
                 else:
                     print("Customer not found.")
-            if search_choice == "2":
+            elif search_choice == "2":
                 product_id = int(input("Enter Product ID: "))
-            product = product_manager.get_product(product_id)
-            if product:
+                product = product_manager.get_product(product_id)
+            elif product:
                 product.display_product_info()
             else:
                 print("Product not found.")
