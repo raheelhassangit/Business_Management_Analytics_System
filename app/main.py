@@ -160,7 +160,7 @@ def main():
                     product.display_product_info()
                 else:
                     print("Product not found.")
-            if search_choice == "3":
+            elif search_choice == "3":
                 sale_id = int(input("Enter Sale ID: "))
 
                 sale = sale_manager.get_sale(sale_id)
