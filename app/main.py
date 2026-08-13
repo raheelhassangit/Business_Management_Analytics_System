@@ -139,7 +139,46 @@ def main():
                         print(f"Quantity: {sale.quantity}")
                         print(f"Unit Price: ${sale.price:.2f}")
                         print(f"Total Price: ${sale.total_price:.2f}")            
+        
         elif choice == "4":
+            print("Enter the option you want to perform:")
+            print("1. Search Customer")
+            print("2. Search Product")
+            print("3. Search Sale")
+            search_choice = input("Enter your choice:")
+            
+            if search_choice == "1":
+                customer = customer_manager.get_customer(customer_id)
+                if customer:
+                    customer_manager.view_customer_info(customer_id)
+                else:
+                    print("Customer not found.")
+            if search_choice == "2":
+                product_id = int(input("Enter Product ID: "))
+            product = product_manager.get_product(product_id)
+            if product:
+                product.display_product_info()
+            else:
+                print("Product not found.")
+            if search_choice == "3":
+                sale_id = int(input("Enter Sale ID: "))
+
+                sale = sale_manager.get_sale(sale_id)
+
+                if sale:
+                    print("\n--- Sale Information ---")
+                    print(f"Sale ID: {sale.sale_id}")
+                    print(f"Customer: {sale.customer.name}")
+                    print(f"Product: {sale.product.name}")
+                    print(f"Quantity: {sale.quantity}")
+                    print(f"Unit Price: ${sale.price:.2f}")
+                    print(f"Total Price: ${sale.total_price:.2f}")
+                else:
+                    print("Sale not found.")    
+            else:
+                print("Invalid search option.")  
+                
+        elif choice == "5":
             print("Exiting the system.")
             break
         else:
