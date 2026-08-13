@@ -148,6 +148,7 @@ def main():
             search_choice = input("Enter your choice:")
             
             if search_choice == "1":
+                customer_id = int(input("Enter Customer ID: "))
                 customer = customer_manager.get_customer(customer_id)
                 if customer:
                     customer_manager.view_customer_info(customer_id)
