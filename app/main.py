@@ -21,7 +21,8 @@ def main():
         print("2. Manage Products")
         print("3. Manage Sales")
         print("4. Search Records")
-        print("5. Exit")
+        print("5. Generate Report")
+        print("6. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -178,7 +179,11 @@ def main():
             else:
                 print("Invalid search option.")  
                 
+        
         elif choice == "5":
+            ...
+        
+        elif choice == "6":
             print("Exiting the system.")
             break
         else:
