@@ -186,7 +186,7 @@ def main():
                 
         
         elif choice == "5":
-            ...
+            report_manager.generate_report()
         
         elif choice == "6":
             print("Exiting the system.")
