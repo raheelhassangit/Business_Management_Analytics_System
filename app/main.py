@@ -4,6 +4,7 @@ from app.digital_product import DigitalProduct
 from app.product_manager import ProductManager
 from app.customer import Customer
 from app.sale_manager import SaleManager
+from app.report_manager import ReportManager
 
 
 def main():
@@ -13,7 +14,11 @@ def main():
     customer_manager,
     product_manager
     )
-    
+    report_manager = ReportManager(
+    customer_manager,
+    product_manager,
+    sale_manager
+)
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
         print("\nPlease select an option:")

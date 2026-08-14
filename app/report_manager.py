@@ -1,7 +1,7 @@
 from app.physical_product import PhysicalProduct
 from app.digital_product import DigitalProduct
 
-class Reportmanager:
+class ReportManager:
     def __init__(self, customer_manager, product_manager, sale_manager):
         self.customer_manager = customer_manager
         self.product_manager = product_manager
