@@ -191,6 +191,12 @@ def main():
             report_manager.generate_report()
         
         elif choice == "6":
+            ...
+        
+        elif choice == "7":
+            ...    
+        
+        elif choice == "8":
             print("Exiting the system.")
             break
         else:
