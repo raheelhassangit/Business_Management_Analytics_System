@@ -1,0 +1,57 @@
+{
+    "customers": [
+        {
+            "customer_id": 123,
+            "name": "Raheel",
+            "email": "test@gmail.com",
+            "phone": "03001234567",
+            "address": "ABC, Lahore"
+        },
+        {
+            "customer_id": 456,
+            "name": "Hassan",
+            "email": "test1@gmail.com",
+            "phone": "03001234567",
+            "address": "DEF, Lahore"
+        }
+    ],
+    "products": [
+        {
+            "product_id": 123,
+            "name": "Laptop",
+            "category": "Tech",
+            "price": 12.99,
+            "quantity": 3,
+            "supplier": "Random",
+            "type": "physical",
+            "weight": 2.0
+        },
+        {
+            "product_id": 456,
+            "name": "Ebook",
+            "category": "Education",
+            "price": 12.99,
+            "quantity": 4,
+            "supplier": "Random",
+            "type": "digital",
+            "file_size": 1.0,
+            "download_link": "https://test.com"
+        }
+    ],
+    "sales": [
+        {
+            "sale_id": 1,
+            "customer_id": 123,
+            "product_id": 123,
+            "quantity": 2,
+            "price": 12.99
+        },
+        {
+            "sale_id": 2,
+            "customer_id": 456,
+            "product_id": 456,
+            "quantity": 1,
+            "price": 12.99
+        }
+    ]
+}
