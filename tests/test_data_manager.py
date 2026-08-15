@@ -86,6 +86,43 @@ def main():
 
     # Save
     data_manager.save_data()
+    data_manager.load_data("data.json")
+    print("\n--- Sales ---")
+
+    sales = sale_manager.get_all_sales()
+
+    print(f"Total Sales: {len(sales)}")
+
+    for sale in sales:
+        print(
+            f"Sale ID: {sale.sale_id} | "
+            f"Customer: {sale.customer.name} | "
+            f"Product: {sale.product.name} | "
+            f"Quantity: {sale.quantity} | "
+            f"Total: ${sale.total_price:.2f}"
+        )
+
+    # ---------------- RELATIONSHIP TEST ----------------
+
+    print("\n--- Relationship Verification ---")
+    customers = customer_manager.get_all_customers()
+    products = product_manager.get_all_products()
+
+    for sale in sales:
+
+        customer_exists = sale.customer in customers
+        product_exists = sale.product in products
+
+        print(
+            f"Sale {sale.sale_id}: "
+            f"Customer linked = {customer_exists}, "
+            f"Product linked = {product_exists}"
+        )
+
+    print("\n=============================================")
+    print("       DATA VERIFICATION COMPLETED")
+    print("=============================================")
+
 
 
 if __name__ == "__main__":
