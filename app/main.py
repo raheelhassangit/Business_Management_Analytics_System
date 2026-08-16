@@ -25,6 +25,7 @@ def main():
         product_manager,
         sale_manager
     )
+    data_manager.load_data("data.json")
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
         print("\nPlease select an option:")
