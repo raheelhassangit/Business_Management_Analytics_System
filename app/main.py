@@ -204,6 +204,7 @@ def main():
             ...    
         
         elif choice == "8":
+            data_manager.save_data()
             print("Exiting the system.")
             break
         else:
