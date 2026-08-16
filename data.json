@@ -13,6 +13,13 @@
             "email": "test1@gmail.com",
             "phone": "03001234567",
             "address": "DEF, Lahore"
+        },
+        {
+            "customer_id": 789,
+            "name": "Ali",
+            "email": "Ali@gmail.com",
+            "phone": "03123456789",
+            "address": "karachi"
         }
     ],
     "products": [
