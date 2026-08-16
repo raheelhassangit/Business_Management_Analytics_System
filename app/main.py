@@ -5,6 +5,7 @@ from app.product_manager import ProductManager
 from app.customer import Customer
 from app.sale_manager import SaleManager
 from app.report_manager import ReportManager
+from app.data_manager import DataManager
 
 
 def main():
