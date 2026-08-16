@@ -20,6 +20,11 @@ def main():
     product_manager,
     sale_manager
 )
+    data_manager = DataManager(
+        customer_manager,
+        product_manager,
+        sale_manager
+    )
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
         print("\nPlease select an option:")
