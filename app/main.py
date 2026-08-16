@@ -196,7 +196,7 @@ def main():
             report_manager.generate_report()
         
         elif choice == "6":
-            data_manager.save_data()
+            data_manager.save_data("data.json")
             print("Exiting the system.")
             break
         else:
