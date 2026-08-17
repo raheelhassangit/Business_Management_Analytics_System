@@ -1,8 +1,10 @@
-import requests
-from API.qoute_api import fetch_random_quote
+from API.qoute_api import Quote
 
 def main():
-    fetch_random_quote()
+    Quote_obj = Quote()
+    quote = Quote_obj.fetch_random_quote()
+    print(quote)
+
     
-if __name__ == main():
+if __name__ == "__main__":
     main()    
