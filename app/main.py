@@ -6,6 +6,7 @@ from app.customer import Customer
 from app.sale_manager import SaleManager
 from app.report_manager import ReportManager
 from app.data_manager import DataManager
+from API.qoute_api import Quote
 
 
 def main():
@@ -25,7 +26,13 @@ def main():
         product_manager,
         sale_manager
     )
+    # quote_obj = Quote()
     data_manager.load_data("data.json")
+    # print("\n=============================================")
+    # print("               QUOTE OF THE DAY")
+    # print("=============================================")
+    # quote = quote_obj.fetch_random_quote()
+    # print(quote)
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
         print("\nPlease select an option:")
