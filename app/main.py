@@ -26,8 +26,8 @@ def main():
         product_manager,
         sale_manager
     )
-    quote_obj = Quote()
     data_manager.load_data("data.json")
+    quote_obj = Quote()
     print("\n=============================================")
     print("               QUOTE OF THE DAY")
     print("=============================================")
