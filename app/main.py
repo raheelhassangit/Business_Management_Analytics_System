@@ -33,7 +33,9 @@ def main():
     print("=============================================")
     quote = quote_obj.fetch_random_quote()
     print(quote)
+    print("\n==================================================================")
     print("____ Welcome to Personal Finance & Business Management System ____")
+    print("==================================================================")
     while True:
         print("\nPlease select an option:")
         print("1. Manage Customers")
