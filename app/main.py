@@ -31,7 +31,7 @@ def main():
     print("\n=============================================")
     print("               QUOTE OF THE DAY")
     print("=============================================")
-    # quote = quote_obj.fetch_random_quote()
+    quote = quote_obj.fetch_random_quote()
     # print(quote)
     print("____ Welcome to Personal Finance & Business Management System ____")
     while True:
