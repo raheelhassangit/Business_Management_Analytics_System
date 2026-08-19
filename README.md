@@ -35,3 +35,47 @@ Quote of the Day — fetches a random quote from a public API on startup
 ├── data.json                  # Persisted application data
 ├── requirements.txt
 └── README.md
+
+## Design Overview
+Abstraction & Inheritance: Product is an abstract base class (ABC) defining a shared interface. PhysicalProduct and DigitalProduct inherit from it and implement calculate_shipping_cost() differently, demonstrating polymorphism.
+Encapsulation: Product quantity is exposed as a validated property, rejecting negative or non-integer values at the point of assignment.
+Separation of Concerns: Business logic (managers) is kept separate from the persistence layer (DataManager) and the reporting layer (ReportManager), following a manager-per-entity pattern.
+Custom Exceptions: Domain-specific errors (InsufficientStockError, InvalidQuantityError) are raised instead of generic exceptions, making failure states explicit and catchable.
+Manual Serialization: DataManager handles converting live objects to/from JSON, including reconstructing the correct product subclass (physical vs digital) on load.
+Getting Started
+Prerequisites
+Python 3.10+
+requests library
+Installation
+bash
+pip install requests
+Running the application
+bash
+python -m app.main
+On startup, the app fetches a quote of the day and loads any existing data from data.json. On exit (option 6), current data is saved back to data.json.
+
+Usage
+The app runs an interactive menu:
+
+1. Manage Customers
+2. Manage Products
+3. Manage Sales
+4. Search Records
+5. Generate Report
+6. Exit
+Each option opens a sub-menu for the relevant CRUD operations.
+
+Known Limitations / Roadmap
+This project is intentionally scoped as a fundamentals exercise, not a production system. Planned/possible improvements:
+
+Input validation around console input() calls (currently assumes well-formed input)
+Logging instead of print() for operational messages
+Type hints across modules
+Unit tests for manager and model logic
+A future Django-based version of this same domain model, replacing the console layer with a proper web interface and ORM-backed persistence
+
+## Author
+### Raheel Hassan GitHub: raheelhassangit LinkedIn: raheel-hassan
+
+
+
