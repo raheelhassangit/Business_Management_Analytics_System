@@ -14,3 +14,24 @@ Search — look up any customer, product, or sale by ID
 Reporting — aggregate report covering customer count, inventory breakdown (physical vs. digital), total stock, inventory value, and total revenue
 Persistence — all data is saved to and loaded from data.json between sessions
 Quote of the Day — fetches a random quote from a public API on startup
+
+## Project Structure
+.
+├── app/
+│   ├── customer.py           # Customer data model (dataclass)
+│   ├── customer_manager.py   # CRUD operations for customers
+│   ├── product.py            # Abstract base Product class
+│   ├── physical_product.py   # Physical product (weight-based shipping)
+│   ├── digital_product.py    # Digital product (no shipping cost)
+│   ├── product_manager.py    # CRUD operations for products
+│   ├── sale.py                # Sale data model
+│   ├── sale_manager.py       # Sale recording with stock validation
+│   ├── report_manager.py     # Business analytics/report generation
+│   ├── data_manager.py       # JSON save/load for all entities
+│   ├── exceptions.py         # Custom exceptions (InsufficientStockError, InvalidQuantityError)
+│   └── main.py                # CLI entry point and menu loop
+├── API/
+│   └── qoute_api.py          # Fetches a random quote from a public API
+├── data.json                  # Persisted application data
+├── requirements.txt
+└── README.md
